@@ -43,13 +43,12 @@ Os arquivos devem estar disponíveis no diretório de execução da aplicação,
 7. Ao finalizar todas as tarefas, o sistema apresenta o total geral de ocorrências e o tempo de execução.
 
 ## Exemplo de saída
+```text
+=======================================
 
-===============================
+     SISTEMA DE BUSCA DE NOMES
 
-#### SISTEMA DE BUSCA DE NOMES
-
-===============================
-
+=======================================
 
 Procurado: Thiago
 
@@ -67,9 +66,9 @@ Linha 23 : Thiago Yuri Uchoa
 [signatarios-out-2014.txt]<br>
 Linha 197 : Thiago Ezequiel Crisóstomo
 
--------------------------------
-Todas as buscas foram finalizadas.<br>
-Total de ocorrências: 4<br>
+--------------------------------------
+Todas as buscas foram finalizadas.
+Total de ocorrências: 4
 Tempo total: 32 ms
-
-===============================
+======================================
+```
