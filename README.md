@@ -16,7 +16,7 @@ Durante a execução, o sistema identifica as linhas que contêm o nome procurad
 
 ## Tecnologias utilizadas
 
-- **Java 21 ou superior:** linguagem de programação utilizada no desenvolvimento.
+- **Java 25:** linguagem de programação utilizada no desenvolvimento.
 - **Virtual Threads:** permitem executar múltiplas tarefas concorrentes com menor custo de gerenciamento de threads.
 - **ExecutorService:** responsável pelo gerenciamento e execução das tarefas concorrentes.
 - **AtomicInteger:** utilizado para compartilhar e atualizar o contador global de ocorrências de maneira segura entre as threads.
