@@ -4,26 +4,24 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class BuscaNomeRunnable implements Runnable{
 
     private final String nomeArquivo;
     private final String nomeBuscado;
+    private AtomicInteger totalOcorrencias;
 
-    public BuscaNomeRunnable(String nomeArquivo, String nomeBuscado){
+    public BuscaNomeRunnable(String nomeArquivo, String nomeBuscado, AtomicInteger totalOcorrencias){
         this.nomeArquivo = nomeArquivo;
         this.nomeBuscado = nomeBuscado;
+        this.totalOcorrencias = totalOcorrencias;
     }
 
     @Override
     public void run() {
 
         Thread thread = Thread.currentThread();
-
-        System.out.println(
-        "Iniciando buaca no arquivo: " + nomeArquivo + " / Virtual Thread: " + thread.isVirtual()+
-                " / Thread ID: " + thread.threadId()
-        );
 
         int ocorrencias = 0;
 
@@ -35,15 +33,14 @@ public class BuscaNomeRunnable implements Runnable{
                 numeroLinha++;
                 if (conteudo.contains(nomeBuscado)){
                     ocorrencias++;
-                    System.out.println("["+nomeArquivo+"] Linha "+ numeroLinha+" : "+ conteudo);
+                    totalOcorrencias.incrementAndGet();
+                    System.out.println("["+nomeArquivo+"]\n Linha "+ numeroLinha+" : "+ conteudo+"\n");
                 }
             }
 
-            System.out.println("Busca finalizada! Ocorrencias: "+ ocorrencias);
-
         } catch (IOException e) {
             e.printStackTrace();
-            System.out.println("Erro ao ler o arquivo: "+ nomeArquivo);
+            System.out.println("Erro ao ler o arquivo: " + nomeArquivo);
         }
     }
 }
