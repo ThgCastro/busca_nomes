@@ -5,12 +5,14 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Main {
-    static void main(String[] args) throws InterruptedException {
+    static void main(){
         AtomicInteger totalOcorrencias = new AtomicInteger(0);
 
-        System.out.println("========================================\n" +
-                "       SISTEMA DE BUSCA DE NOMES\n" +
-                "========================================\n");
+        System.out.println("""
+                ========================================
+                       SISTEMA DE BUSCA DE NOMES
+                ========================================
+                """);
             String procurado = "Thiago";
             System.out.println("Procurado: " + procurado+"\n");
 
@@ -22,7 +24,6 @@ public class Main {
                     "signatarios-out-2014.txt"
             };
 
-            Thread[] threads = new Thread[arquivos.length];
             System.out.println("Iniciando busca nos arquivos...\n");
 
             try(ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor()){
