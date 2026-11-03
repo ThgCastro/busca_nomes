@@ -42,30 +42,34 @@ Os arquivos devem estar disponíveis no diretório de execução da aplicação,
 6. Quando o nome procurado é encontrado, a ocorrência é contabilizada individualmente e o contador global é incrementado por meio de AtomicInteger.
 7. Ao finalizar todas as tarefas, o sistema apresenta o total geral de ocorrências e o tempo de execução.
 
-Exemplo de saída
+## Exemplo de saída
 
-========================================
-       SISTEMA DE BUSCA DE NOMES
-========================================
+===============================
+
+#### SISTEMA DE BUSCA DE NOMES
+
+===============================
+
 
 Procurado: Thiago
 
 Iniciando busca nos arquivos...
 
-[signatarios-out-2014.txt]
+[signatarios-out-2014.txt]<br>
 Linha 20 : Thiago Roberto Rezende
 
-[signatarios-fev-2002.txt]
+[signatarios-fev-2002.txt]<br>
 Linha 15 : Thiago Ramos Vieira
  
-[signatarios-jun-2016.txt]
+[signatarios-jun-2016.txt]<br>
 Linha 23 : Thiago Yuri Uchoa
 
-[signatarios-out-2014.txt]
+[signatarios-out-2014.txt]<br>
 Linha 197 : Thiago Ezequiel Crisóstomo
 
-----------------------------------------
-Todas as buscas foram finalizadas.
-Total de ocorrências: 4
+-------------------------------
+Todas as buscas foram finalizadas.<br>
+Total de ocorrências: 4<br>
 Tempo total: 32 ms
-========================================
+
+===============================
