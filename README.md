@@ -39,3 +39,33 @@ Os arquivos devem estar disponíveis no diretório de execução da aplicação,
 3. O `ExecutorService`, utilizando `newVirtualThreadPerTaskExecutor()`, gerencia a execução das tarefas.
 4. Para cada arquivo, uma instância de `BuscaNomeRunnable` é criada e submetida ao executor.
 5. Cada tarefa realiza a leitura de seu respectivo arquivo linha por linha.
+6. Quando o nome procurado é encontrado, a ocorrência é contabilizada individualmente e o contador global é incrementado por meio de AtomicInteger.
+7. Ao finalizar todas as tarefas, o sistema apresenta o total geral de ocorrências e o tempo de execução.
+
+Exemplo de saída
+
+========================================
+       SISTEMA DE BUSCA DE NOMES
+========================================
+
+Procurado: Thiago
+
+Iniciando busca nos arquivos...
+
+[signatarios-out-2014.txt]
+Linha 20 : Thiago Roberto Rezende
+
+[signatarios-fev-2002.txt]
+Linha 15 : Thiago Ramos Vieira
+ 
+[signatarios-jun-2016.txt]
+Linha 23 : Thiago Yuri Uchoa
+
+[signatarios-out-2014.txt]
+Linha 197 : Thiago Ezequiel Crisóstomo
+
+----------------------------------------
+Todas as buscas foram finalizadas.
+Total de ocorrências: 4
+Tempo total: 32 ms
+========================================
